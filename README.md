@@ -5,7 +5,7 @@
 
 ### 🧑‍💻 About Me
 
-I'm an aspiring **software engineer** passionate about giving back to society and excelling in the tech industry.  
+I'm a **software engineer** passionate about giving back to society and excelling in the tech industry.  
 I enjoy exploring new ideas and seeking out challenges that help me grow.
 
 - 🌱 Currently learning and building cool projects  
