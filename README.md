@@ -1,58 +1,75 @@
-<h1 align="center">Hi, I'm Izuchukwu Tony 👋</h1>
-<h3 align="center">Software Engineer </h3>
+<div align="center">
 
----
+<img src="./ascii.svg" width="460" alt="Izuchukwu Tony"/>
 
-### 🧑‍💻 About Me
+<img src="./stats.svg" width="620" alt="Contributions in the last year"/>
 
-I'm a **software engineer** passionate about giving back to society and excelling in the tech industry.  
-I enjoy exploring new ideas and seeking out challenges that help me grow.
+[izuchukwutony.com](https://izuchukwutony.com/) &nbsp;·&nbsp;
+[linkedin](https://www.linkedin.com/in/izuchukwu-tony-9aa592218/) &nbsp;·&nbsp;
+[email](mailto:izuchukwuonuoha6@gmail.com)
 
-- 🌱 Currently learning and building cool projects  
-- 🔍 Always exploring new ideas and challenges  
-- 🎯 Focused on personal growth and community impact  
+</div>
 
----
-### 🧠 Hobbies
-- 🧩 Solving problems & exploring new tech  
-- 🔍 Seeking out challenges that push my limits  
-- 🌍 Connecting with like-minded developers
+<img src="./hd-about.svg" width="620" alt="about"/>
 
----
+> Software engineer in Manchester. Frontend, product, fullstack.<br>
+> Interfaces people actually use, systems that hold up behind them.
 
-### 🛠️ Tech Stack
+I design and ship client-facing products. Lead frontend and product<br>
+design at Klarnow, after a BSc in Computer Science (Software<br>
+Engineering) at the University of Northampton. Before that, interned<br>
+at Calaya Engineering — the company site is still the one I built.
 
-#### 🧑‍💻 Programming Languages
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)
+<img src="./hd-stack.svg" width="620" alt="stack"/>
 
-#### 🧩 Frameworks & Libraries
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![React Native](https://img.shields.io/badge/React%20Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+<samp>typescript &nbsp; javascript &nbsp; python &nbsp; vue &nbsp; react &nbsp; react-native &nbsp; next.js &nbsp; node &nbsp; three.js &nbsp; expo &nbsp; firebase &nbsp; docker &nbsp; git</samp>
 
+<img src="./hd-projects.svg" width="620" alt="projects"/>
 
-#### 🗄️ Databases
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
+**[izuchukwutony.com](https://izuchukwutony.com/)** &nbsp;·&nbsp; <samp>vue, three.js, gsap</samp><br>
+Personal site: three.js scenes, Lenis scroll, the long-form version<br>
+of this page.
 
-#### ⚙️ DevOps & Tools
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ%20IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white)
+**[calaya-web](https://github.com/Izu-kun23/calaya-web)** &nbsp;·&nbsp; <samp>next.js</samp><br>
+The Calaya Engineering site — mission, services, brand. Shipped on<br>
+the internship, still live at [calaya-web.vercel.app](https://calaya-web.vercel.app).
 
----
+**[lms-frontend](https://github.com/Izu-kun23/lms-frontend)** &nbsp;·&nbsp; <samp>typescript, next.js</samp><br>
+Learning-management frontend: tables, dashboards, student flows.
 
-### 🤝 Let's Connect
+**[one.ng](https://github.com/Izu-kun23/one.ng)** &nbsp;·&nbsp; <samp>react native, expo</samp><br>
+Mobile client for one.ng — maps, location, native shells for iOS<br>
+and Android.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/izuchukwu-tony-9aa592218/)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:izuchukwuonuoha6@gmail.com)
+<img src="./hd-stats.svg" width="620" alt="stats"/>
 
-### 🤝 Let's build something amazing together!
+<div align="center">
+
+<img src="./streak.svg" width="620" alt="Current and longest streak"/>
+
+<img src="./langs.svg" width="620" alt="Top languages by bytes and by repo"/>
+
+<img src="./year.svg" width="620" alt="The last year, one character per day"/>
+
+</div>
+
+<img src="./hd-about-this-page.svg" width="620" alt="about this page"/>
+
+Every graphic here is generated, not embedded from anyone else's server.<br>
+`ascii.svg` is a photo pushed through a character ramp by<br>
+[`scripts/make_portrait.py`](scripts/make_portrait.py); the stat graphics and<br>
+these section headings are drawn by [a scheduled action](.github/workflows/stats.yml)<br>
+straight from the GitHub GraphQL API, once a day, committing only what changed.
+
+They animate with SMIL inside the SVG, because GitHub strips scripts from<br>
+READMEs — and since nothing loads from a third party, nothing here can<br>
+rate-limit or go dark. The headings are SVGs for the same reason: GitHub also<br>
+strips CSS, so an image is the only way to put this page's own typeface on them.
+
+The typeface is [JetBrains Mono](scripts/fonts), subset to just the characters<br>
+each graphic draws and inlined as base64. That isn't only for looks: the<br>
+portrait's grid assumes an advance width of exactly 0.600 em, and a viewer whose<br>
+default monospace is narrower would otherwise see it squeezed.
+
+Language totals cover public repositories only. `year.svg` uses the portrait's<br>
+character ramp: `:` `+` `#` `@`, quiet to loud.
