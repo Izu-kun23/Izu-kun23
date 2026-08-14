@@ -22,7 +22,7 @@ at Calaya Engineering, which i contributed to the building and maintaining of th
 
 <img src="./hd-stack.svg" width="620" alt="stack"/>
 
-<samp>typescript &nbsp; javascript &nbsp; python &nbsp; vue &nbsp; react &nbsp; react-native &nbsp; next.js &nbsp; node &nbsp; three.js &nbsp; expo &nbsp; firebase &nbsp; docker &nbsp; git</samp>
+<img src="./stack.svg" width="620" alt="typescript, javascript, python, vue, react, react-native, next.js, node, three.js, expo, firebase, docker, git"/>
 
 <img src="./hd-projects.svg" width="620" alt="projects"/>
 
