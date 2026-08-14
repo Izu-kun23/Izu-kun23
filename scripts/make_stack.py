@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Draw stack.svg — official Simple Icons, same column as the rest of the page.
+"""Draw stack.svg — official brand marks, same 620px column as the rest.
 
-Brand-coloured marks stay their colour in both themes. Next.js, Three.js and
-Expo are drawn in the page's ink so they don't vanish on GitHub's dark surface.
+Icons are the Devicon originals (MIT), inlined so the README never calls a
+CDN. Next.js, Three.js and Expo are black-on-transparent; they invert in
+dark mode so they don't vanish on GitHub's dark surface.
 
-Sources live in scripts/icons/ (Simple Icons, CC0). Re-run this file after
-changing the list; it does not need a GitHub token.
+Re-run this file after changing the list. No GitHub token required.
 """
 import os
 import re
@@ -16,54 +16,48 @@ import generate_stats as g  # noqa: E402
 
 ICON_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "icons")
 
-# slug in scripts/icons/, label under the mark, brand hex or None to use ink
+# file in scripts/icons/, label, invert in dark mode
 STACK = [
-    ("typescript", "typescript", "#3178C6"),
-    ("javascript", "javascript", "#F7DF1E"),
-    ("python",     "python",     "#3776AB"),
-    ("vuedotjs",   "vue",        "#4FC08D"),
-    ("react",      "react",      "#61DAFB"),
-    ("react",      "react-native","#61DAFB"),
-    ("nextdotjs",  "next.js",    None),
-    ("nodedotjs",  "node",       "#5FA04E"),
-    ("threedotjs", "three.js",   None),
-    ("expo",       "expo",       None),
-    ("firebase",   "firebase",   "#DD2C00"),
-    ("docker",     "docker",     "#2496ED"),
-    ("git",        "git",        "#F05032"),
+    ("typescript",   "typescript",    False),
+    ("javascript",   "javascript",    False),
+    ("python",       "python",        False),
+    ("vue",          "vue",           False),
+    ("react",        "react",         False),
+    ("react-native", "react-native",  False),
+    ("nextjs",       "next.js",       True),
+    ("node",         "node",          False),
+    ("threejs",      "three.js",      True),
+    ("expo",         "expo",          True),
+    ("firebase",     "firebase",      False),
+    ("docker",       "docker",        False),
+    ("git",          "git",           False),
 ]
 
 COLS = 7
 ICON = 32
 PAD_TOP = 10
-GAP = 14          # icon bottom → label baseline
-ROW_GAP = 22      # label baseline → next row's icon
+GAP = 14
+ROW_GAP = 22
 LABEL_SIZE = 9
-DESCENDER = 8     # room under the last baseline so p/y/g don't clip
+DESCENDER = 8
+INK = ".ink{fill:#24292f}@media(prefers-color-scheme:dark){.ink{filter:invert(1)}}"
 
 
-def path_of(slug):
-    with open(os.path.join(ICON_DIR, f"{slug}.svg"), encoding="utf-8") as f:
-        svg = f.read()
-    found = re.search(r'<path d="([^"]+)"', svg)
-    if not found:
-        raise SystemExit(f"no path in {slug}.svg")
-    return found.group(1)
-
-
-def mark(x, y, slug, d, color):
-    """Place a 24×24 Simple Icon with its origin at (x, y)."""
-    s = ICON / 24
-    fill = 'class="e-f"' if color is None else f'fill="{color}"'
-    parts = []
-    # JS letters are holes in the yellow square. Ink behind them so they
-    # read as the official dark-on-yellow mark instead of empty cutouts.
-    if slug == "javascript":
-        parts.append(f'<rect x="{x:.1f}" y="{y:.1f}" width="{ICON}" '
-                     f'height="{ICON}" class="e-f"/>')
-    parts.append(f'<g transform="translate({x:.1f} {y:.1f}) scale({s:.4f})">'
-                 f'<path d="{d}" {fill}/></g>')
-    return "".join(parts)
+def nest(slug, x, y, ink):
+    """Inner <svg> of a Devicon file, IDs prefixed so gradients don't collide."""
+    raw = open(os.path.join(ICON_DIR, f"{slug}.svg"), encoding="utf-8").read()
+    vb = re.search(r'viewBox="([^"]+)"', raw)
+    body = re.search(r"<svg[^>]*>(.*)</svg>", raw, re.S)
+    if not vb or not body:
+        raise SystemExit(f"bad svg: {slug}")
+    inner = body.group(1)
+    for i in sorted(set(re.findall(r'\bid="([^"]+)"', inner)), key=len, reverse=True):
+        inner = inner.replace(f'id="{i}"', f'id="{slug}-{i}"')
+        inner = inner.replace(f"url(#{i})", f"url(#{slug}-{i})")
+    cls = ' class="ink"' if ink else ""
+    fill = ' fill="#111"' if ink else ""
+    return (f'<svg x="{x:.1f}" y="{y:.1f}" width="{ICON}" height="{ICON}" '
+            f'viewBox="{vb.group(1)}"{cls}{fill}>{inner}</svg>')
 
 
 def draw():
@@ -73,19 +67,17 @@ def draw():
     H = PAD_TOP + rows * row_h + (rows - 1) * ROW_GAP + DESCENDER
     cell = g.WIDTH / COLS
 
-    p = [g.head(g.WIDTH, H)]
-    for i, (slug, name, color) in enumerate(STACK):
+    head = g.head(g.WIDTH, H).replace("</style>", INK + "</style>")
+    p = [head]
+    for i, (slug, name, ink) in enumerate(STACK):
         r, c = divmod(i, COLS)
         count = COLS if r < rows - 1 else n - r * COLS
-        # last row centres leftover cells
         offset = (g.WIDTH - count * cell) / 2 if r == rows - 1 else 0
         cx = offset + (c + 0.5) * cell
         iy = PAD_TOP + r * (row_h + ROW_GAP)
-        lx = cx
-        ly = iy + ICON + GAP
         p.append("<g>"
-                 + mark(cx - ICON / 2, iy, slug, path_of(slug), color)
-                 + g.label(lx, ly, name, LABEL_SIZE, "m-f", "middle")
+                 + nest(slug, cx - ICON / 2, iy, ink)
+                 + g.label(cx, iy + ICON + GAP, name, LABEL_SIZE, "m-f", "middle")
                  + "</g>")
     p.append("</svg>")
     return "".join(p)
@@ -93,8 +85,7 @@ def draw():
 
 def main():
     out = os.path.join(os.environ.get("OUT_DIR", "."), "stack.svg")
-    svg = draw()
-    changed = g.write(out, svg)
+    changed = g.write(out, draw())
     print(("wrote " if changed else "unchanged ") + out)
 
 
