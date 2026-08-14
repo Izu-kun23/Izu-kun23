@@ -18,7 +18,7 @@
 I design and ship client-facing products. Lead frontend and product<br>
 design at Klarnow, after a BSc in Computer Science (Software<br>
 Engineering) at the University of Northampton. Before that, interned<br>
-at Calaya Engineering — the company site is still the one I built.
+at Calaya Engineering, which i contributed to the building and maintaining of their systems and infrastructure.
 
 <img src="./hd-stack.svg" width="620" alt="stack"/>
 
