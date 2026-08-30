@@ -12,7 +12,7 @@
 
 <img src="./hd-about.svg" width="620" alt="about"/>
 
-> Software engineer in Manchester. Frontend, product, fullstack.<br>
+> Software engineer in the United Kingdom. Frontend, product, fullstack.<br>
 > Interfaces people actually use, systems that hold up behind them.
 
 I design and ship client-facing products. Lead frontend and product<br>
