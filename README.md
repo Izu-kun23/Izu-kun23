@@ -4,7 +4,7 @@
 
 <img src="./stats.svg" width="620" alt="Contributions in the last year"/>
 
-[izuchukwutony.com](https://izuchukwutony.com/) &nbsp;·&nbsp;
+[izuchukwu-portfolio.vercel.app](https://izuchukwu-portfolio.vercel.app/) &nbsp;·&nbsp;
 [linkedin](https://www.linkedin.com/in/izuchukwu-tony-9aa592218/) &nbsp;·&nbsp;
 [email](mailto:izuchukwuonuoha6@gmail.com)
 
@@ -26,7 +26,7 @@ at Calaya Engineering, which i contributed to the building and maintaining of th
 
 <img src="./hd-projects.svg" width="620" alt="projects"/>
 
-**[izuchukwutony.com](https://izuchukwutony.com/)** &nbsp;·&nbsp; <samp>vue, three.js, gsap</samp><br>
+**[izuchukwu-portfolio.vercel.app](https://izuchukwu-portfolio.vercel.app/)** &nbsp;·&nbsp; <samp>vue, three.js, gsap</samp><br>
 Personal site: three.js scenes, Lenis scroll, the long-form version<br>
 of this page.
 
@@ -52,5 +52,4 @@ and Android.
 <img src="./year.svg" width="620" alt="The last year, one character per day"/>
 
 </div>
-
 
